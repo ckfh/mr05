@@ -19,6 +19,7 @@ public class WordcountMapper extends Mapper<LongWritable, Text, Text, IntWritabl
         String[] words = line.split(" ");
 
         for(String word:words){
+
             k.set(word);
             context.write(k,v);
         }
